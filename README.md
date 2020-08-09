@@ -6,8 +6,8 @@
 ```docker container exec -ti alpine sh``` 
 
 ## Cleanup 
-To remove all downloaded images, combine two comands. First to list all image ID's and then remove.
+* To remove all downloaded images, combine two comands. First to list all image ID's and then remove.
 ```docker image rmi $(docker image ls -a -q)```
-To stop all containers and remove them.
+* To stop all containers and remove them.
 ```docker container rm $(docker container ls -a -q)```
   
