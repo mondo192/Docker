@@ -1,6 +1,6 @@
 # Docker
 ## Quick start
-* To start an interactive container ```docker container run --rm -ti alpine```
+* To start an interactive container ```docker container run --name <custom-name> --rm -ti <image>```
 * To access already running container through bash ```docker container exec -ti alpine sh``` 
 
 ## Cleanup 
