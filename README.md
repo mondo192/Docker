@@ -1,6 +1,6 @@
 # Docker
 ## Quick start
-* Build image ```docker build --no-cache --build-arg TOKEN="<your-github-token>" -t go-alpine .``` 
+* Build image ```docker build --no-cache --build-arg TOKEN="<personal-access-token>" -t go-alpine .``` 
 * Access container ```docker container run --rm -it go-alpine```
 
 ## Cleanup 
