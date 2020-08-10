@@ -1,8 +1,6 @@
 # Docker
 ## Quick start
-* To start an interactive container ```docker container run --name my-alpine -dit alpine ```
-* To access already running container through bash ```docker container exec -it alpine sh``` 
-* To remove the container ```docker container rm -f my-alpine``` 
+* Build image ```docker build --no-cache --build-arg TOKEN="bhcuds23b" -t go-alpine . ``` 
 
 ## Cleanup 
 * To remove all downloaded images, combine two comands. First to list all image ID's and then remove.```docker image rmi $(docker image ls -a -q)```
