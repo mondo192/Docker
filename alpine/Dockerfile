@@ -5,7 +5,7 @@ ENV TOKEN=$TOKEN
 
 RUN apk --no-cache update && \
     apk --no-cache upgrade && \
-    apk --no-cache add openssh curl git docker && \
+    apk --no-cache add openssh curl git && \
     cat /dev/zero | ssh-keygen -t rsa -b 4096 -N "" && \
     eval "$(ssh-agent -s)" && \
     ssh-add ~/.ssh/id_rsa && \
@@ -13,5 +13,5 @@ RUN apk --no-cache update && \
         -H "Authorization: token $TOKEN" \
         -H "Accept: application/vnd.github.v3+json" \
         https://api.github.com/user/keys \
-        -d '{"title": "docker", "key": "'"$(cat ~/.ssh/id_rsa.pub)"'"}' \
+        -d '{"title": "docker", "key": "'"$(cat ~/.ssh/id_rsa.pub)"'"}'
 	
