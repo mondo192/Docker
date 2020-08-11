@@ -9,6 +9,7 @@
 
 # Jenkins
 ## Quick start
-* Run the container with a mounted volume ```docker run -d -p 8080:8080 -v jenkins_home:/var/jenkins_home --name jenkins jenkins/jenkins:lts```
-* Output the initial admin password ```docker exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword```
+### Powershell
+* Run the container with a mounted volume on host ```docker container run -d -p 8080:8080 -p 50000:50000 -v ${PWD}/jenkins_home:/var/jenkins_home --name jenkins jenkins/jenkins:lts```
+* Output the initial admin password from container ```docker exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword```
 
